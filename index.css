@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+
+:root {
+    --midnight-green: #024554;
+    --stone-bridge: #53736A;
+    --turf-green: #6A8C69;
+    --azeitona: #A8B545;
+    --swing-sage: #e3e2c5;
+    /* --swing-sage: #c2c1ae; */
+  }
+
+  h1, h2, h3, h4{
+    text-align: center;
+  }
+
+  header{
+    background-color: var(--midnight-green);
+  }
+
+  header h1{
+    color: var(--azeitona);
+  }
+
+  #ad-section a{
+    color: var(--azeitona);
+  }
+
+  main{
+    /* bakgrund och textfärg */
+    background: var(--stone-bridge);
+    color: var(--midnight-green);
+
+    /* innehåll */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+
+    padding: 0vh 4vh;
+  }
+
+  .main-content{
+    background: var(--swing-sage);
+  }
+
+  #ad-section{
+    background: var(--turf-green);
+    grid-row: 1;
+  }
+
+  #services-article{
+    grid-row: 2;
+  }
+
+  #workouts-article{
+    grid-row: 3;
+  }
+
+  #coaches-section{
+    grid-row: 4;
+  }
+
+  #reviews-section{
+    grid-row: 5;
+  }
+
+  footer{
+    background: var(--midnight-green);
+    color: var(--swing-sage)
+  }
