@@ -4,27 +4,70 @@
 
 :root {
     --midnight-green: #024554;
-    --stone-bridge: #53736A;
-    --turf-green: #6A8C69;
-    --azeitona: #A8B545;
-    --swing-sage: #e3e2c5;
+    --stone-bridge: #435b54;
+    /* #4e6b63 */
+    --turf-green: #5a7664;
+    /* #698c75 */
+    --azeitona: #79f674;
+    /* #A8B545 */
+    --swing-sage: #f0f0eb;
     /* --swing-sage: #c2c1ae; */
   }
 
   h1, h2, h3, h4{
     text-align: center;
+    margin-bottom: 0.7rem;
+  }
+
+  h2{
+    color: var(--swing-sage);
+  }
+
+  h3{
+    background-color: var(--azeitona);
   }
 
   header{
     background-color: var(--midnight-green);
+    padding: 1rem 0.7rem 1rem;
   }
 
-  header h1{
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav h1{
+    position: absolute;
     color: var(--azeitona);
+  }
+
+  nav label{
+    margin-left: auto;
+  }
+
+  nav select{
+    width: 4rem;
+  }
+
+  #ad-section{
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  #ad-section h2{
+    margin: 0;
   }
 
   #ad-section a{
     color: var(--azeitona);
+    flex-grow: 1;
   }
 
   main{
@@ -35,14 +78,15 @@
     /* innehåll */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5rem 1fr 1fr 1fr 1fr;
+    grid-template-rows: fit-content 1fr 1fr 1fr 1fr;
     gap: 2rem;
 
     padding: 0vh 4vh;
   }
 
   .main-content{
-    background: var(--swing-sage);
+    background: var(--turf-green);
+    padding: 1rem;
   }
 
   #ad-section{
@@ -54,19 +98,58 @@
     grid-row: 2;
   }
 
+  #services-article section{
+    background-color: var(--swing-sage);
+    padding: 0.5rem
+  }
   #workouts-article{
     grid-row: 3;
+  }
+
+  .workouts{
+    background: var(--swing-sage);
+    padding: 0.5rem;
   }
 
   #coaches-section{
     grid-row: 4;
   }
 
+  .coach{
+    background: var(--swing-sage);
+    padding: 0.5rem;
+  }
+
   #reviews-section{
     grid-row: 5;
   }
 
+  .reviews{
+    background: var(--swing-sage);
+    padding: 0.5rem;
+  }
+
   footer{
     background: var(--midnight-green);
+    color: var(--swing-sage);
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  footer a{
     color: var(--swing-sage)
+  }
+
+  #contact-section{
+    
+  }
+  #socials-section{
+
+  }
+
+  #socials-section ul{
+    list-style-type: none;
   }
