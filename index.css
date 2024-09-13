@@ -1,155 +1,186 @@
-*{
-    margin: 0;
+:root {
+  --midnight-green: #024554;
+  --stone-bridge: #435b54;
+  /* #4e6b63 */
+  --turf-green: #5a7664;
+  /* #698c75 */
+  --azeitona: #79f674;
+  /* #A8B545 */
+  --swing-sage: #f0f0eb;
+  /* --swing-sage: #c2c1ae; */
 }
 
-:root {
-    --midnight-green: #024554;
-    --stone-bridge: #435b54;
-    /* #4e6b63 */
-    --turf-green: #5a7664;
-    /* #698c75 */
-    --azeitona: #79f674;
-    /* #A8B545 */
-    --swing-sage: #f0f0eb;
-    /* --swing-sage: #c2c1ae; */
-  }
+@font-face {
+  font-family: maiden;
+  src: url('fonts/MaidenCrimes-WRPE.ttf');
+}
 
-  h1, h2, h3, h4{
-    text-align: center;
-    margin-bottom: 0.7rem;
-  }
+@font-face {
+  font-family: race;
+  src: url('fonts/Race Sport.ttf');
+}
 
-  h2{
-    color: var(--swing-sage);
-  }
+@font-face {
+  font-family: roundo;
+  src: url('fonts/Roundo-Regular.otf');
+}
 
-  h3{
-    background-color: var(--azeitona);
-  }
+* {
+  margin: 0;
+  font-family: roundo;
+}
 
-  header{
-    background-color: var(--midnight-green);
-    padding: 1rem 0.7rem 1rem;
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: race;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
 
-  nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+h1 {
+  font-family: maiden;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
 
-  nav h1{
-    position: absolute;
-    color: var(--azeitona);
-  }
+h2 {
+  color: var(--swing-sage);
+}
 
-  nav label{
-    margin-left: auto;
-  }
+h3 {
+  background-color: var(--azeitona);
+}
 
-  nav select{
-    width: 4rem;
-  }
 
-  #ad-section{
-    text-align: center;
+header {
+  background-color: var(--midnight-green);
+  padding: 1rem 0.7rem 1rem;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
+nav h1 {
+  position: absolute;
+  color: var(--azeitona);
+}
 
-  #ad-section h2{
-    margin: 0;
-  }
+nav label {
+  margin-left: auto;
+}
 
-  #ad-section a{
-    color: var(--azeitona);
-    flex-grow: 1;
-  }
+nav select {
+  width: 4rem;
+}
 
-  main{
-    /* bakgrund och textfärg */
-    background: var(--stone-bridge);
-    color: var(--midnight-green);
+main {
+  /* bakgrund och textfärg */
+  background: var(--stone-bridge);
+  color: var(--midnight-green);
 
-    /* innehåll */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: fit-content 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+  /* innehåll */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 
-    padding: 0vh 4vh;
-  }
+  padding: 0vh 4vh;
+}
 
-  .main-content{
-    background: var(--turf-green);
-    padding: 1rem;
-  }
+.main-content {
+  background: var(--turf-green);
+  padding: 1rem;
+}
 
-  #ad-section{
-    background: var(--turf-green);
-    grid-row: 1;
-  }
+#ad-section {
+  text-align: center;
 
-  #services-article{
-    grid-row: 2;
-  }
+  height: 200px;
 
-  #services-article section{
-    background-color: var(--swing-sage);
-    padding: 0.5rem
-  }
-  #workouts-article{
-    grid-row: 3;
-  }
+  background-image: url('images/pexels-pixabay-50597-500px.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
 
-  .workouts{
-    background: var(--swing-sage);
-    padding: 0.5rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
-  #coaches-section{
-    grid-row: 4;
-  }
+}
 
-  .coach{
-    background: var(--swing-sage);
-    padding: 0.5rem;
-  }
+#ad-section h2 {
+  margin: 0;
+}
 
-  #reviews-section{
-    grid-row: 5;
-  }
+#ad-section a {
+  color: var(--azeitona);
+  flex-grow: 1;
+}
 
-  .reviews{
-    background: var(--swing-sage);
-    padding: 0.5rem;
-  }
+#services-article {
+  grid-row: 2;
+}
 
-  footer{
-    background: var(--midnight-green);
-    color: var(--swing-sage);
+#services-article section {
+  background-color: var(--swing-sage);
+  padding: 0.5rem
+}
 
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 1rem;
-  }
+#workouts-article {
+  grid-row: 3;
+}
 
-  footer a{
-    color: var(--swing-sage)
-  }
+.workouts {
+  background: var(--swing-sage);
+  padding: 0.5rem;
+}
 
-  #contact-section{
-    
-  }
-  #socials-section{
+#coaches-section {
+  grid-row: 4;
+}
 
-  }
+#coaches-section p {}
 
-  #socials-section ul{
-    list-style-type: none;
-  }
+.coach {
+  background: var(--swing-sage);
+  padding: 0.5rem;
+}
+
+.coach img {
+  clip-path: circle();
+  width: 200px;
+  transform: scaleX(-1);
+}
+
+#reviews-section {
+  grid-row: 5;
+}
+
+.reviews {
+  background: var(--swing-sage);
+  padding: 0.5rem;
+}
+
+footer {
+  background: var(--midnight-green);
+  color: var(--swing-sage);
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+footer a {
+  color: var(--swing-sage)
+}
+
+#socials-section ul {
+  list-style-type: none;
+}
