@@ -54,6 +54,21 @@ h3 {
   background-color: var(--azeitona);
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+a {
+  font-family: race;
+}
 
 header {
   background-color: var(--midnight-green);
@@ -95,11 +110,11 @@ main {
 .main-content {
   background: var(--turf-green);
   padding: 1rem;
+
+  border-radius: 10px;
 }
 
 #ad-section {
-  text-align: center;
-
   height: 200px;
 
   background-image: url('images/pexels-pixabay-50597-500px.jpg');
@@ -107,11 +122,13 @@ main {
   background-repeat: no-repeat;
   background-position: 0;
 
+  text-align: center;
+  padding: 0.5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 #ad-section h2 {
@@ -132,8 +149,28 @@ main {
   padding: 0.5rem
 }
 
-#workouts-article {
+#hero-section {
+  height: 250px;
+  margin-left: -100px;
+  margin-right: -100px;
+
+  background: url('images/pexels-rdne-6539832-500px.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+
   grid-row: 3;
+}
+
+#hero-section div {
+  background-color: rgba(1, 1, 1, .5);
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workouts-article {
+  grid-row: 4;
 }
 
 .workouts {
@@ -142,7 +179,7 @@ main {
 }
 
 #coaches-section {
-  grid-row: 4;
+  grid-row: 5;
 }
 
 #coaches-section p {}
@@ -159,7 +196,7 @@ main {
 }
 
 #reviews-section {
-  grid-row: 5;
+  grid-row: 6;
 }
 
 .reviews {
@@ -177,8 +214,13 @@ footer {
   padding: 1rem;
 }
 
+footer h3 {
+  background: none;
+}
+
 footer a {
-  color: var(--swing-sage)
+  color: var(--swing-sage);
+  font-family: roundo;
 }
 
 #socials-section ul {
