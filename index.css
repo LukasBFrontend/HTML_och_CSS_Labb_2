@@ -1,3 +1,4 @@
+/* grundfärger */
 :root {
   --midnight-green: #024554;
   --stone-bridge: #435b54;
@@ -10,6 +11,7 @@
   /* --swing-sage: #c2c1ae; */
 }
 
+/* fonter */
 @font-face {
   font-family: maiden;
   src: url('fonts/MaidenCrimes-WRPE.ttf');
@@ -30,6 +32,7 @@
   font-family: roundo;
 }
 
+/* rubriker */
 h1,
 h2,
 h3,
@@ -54,6 +57,7 @@ h3 {
   background-color: var(--azeitona);
 }
 
+/* högerpil */
 .arrow {
   border: solid black;
   border-width: 0 2px 2px 0;
@@ -95,16 +99,13 @@ nav select {
 }
 
 main {
-  /* bakgrund och textfärg */
   background: var(--stone-bridge);
   color: var(--midnight-green);
+  padding: 0vh 4vh;
 
-  /* innehåll */
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-
-  padding: 0vh 4vh;
 }
 
 .main-content {
@@ -126,23 +127,28 @@ main {
   padding: 0.5rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
 #ad-section h2 {
+  background: rgba(1, 1, 1, .2);
   margin: 0;
+
+  flex-grow: 1;
+
 }
 
 #ad-section a {
+  background: rgba(1, 1, 1, .2);
+  padding: 0.3rem 0.5rem;
+
   color: var(--azeitona);
-  flex-grow: 1;
+
 }
 
-#services-article {
-  grid-row: 2;
-}
+#services-article {}
 
 #services-article section {
   background-color: var(--swing-sage);
@@ -151,36 +157,33 @@ main {
 
 #hero-section {
   height: 250px;
-  margin-left: -100px;
-  margin-right: -100px;
+  margin: 0 -4vh;
 
   background: url('images/pexels-rdne-6539832-500px.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
 
-  grid-row: 3;
 }
 
 #hero-section div {
   background-color: rgba(1, 1, 1, .5);
-  width: 100vw;
+  padding: 0 .5rem;
+  width: 80%;
+
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
 }
 
-#workouts-article {
-  grid-row: 4;
-}
+#workouts-article {}
 
 .workouts {
   background: var(--swing-sage);
   padding: 0.5rem;
 }
 
-#coaches-section {
-  grid-row: 5;
-}
+#coaches-section {}
 
 #coaches-section p {}
 
@@ -195,9 +198,7 @@ main {
   transform: scaleX(-1);
 }
 
-#reviews-section {
-  grid-row: 6;
-}
+#reviews-section {}
 
 .reviews {
   background: var(--swing-sage);
@@ -225,4 +226,44 @@ footer a {
 
 #socials-section ul {
   list-style-type: none;
+}
+
+@media (min-width: 480px) {
+  #services-grid {
+    background: var(--swing-sage);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #workouts-flex {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    background-color: var(--swing-sage);
+  }
+
+  .workouts {
+    flex-grow: 1;
+  }
+
+  #ad-section {
+    height: 300px;
+
+    background-image: url('images/pexels-pixabay-50597-800px.jpg');
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
+
+  #hero-section {
+    height: 400px;
+    margin: 0 -4vh;
+
+    background: url('images/pexels-rdne-6539832-800px.jpg');
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
 }
