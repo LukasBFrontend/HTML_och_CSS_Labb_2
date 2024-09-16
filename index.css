@@ -4,6 +4,7 @@
   --stone-bridge: #435b54;
   /* #4e6b63 */
   --turf-green: #5a7664;
+  --turf-green2: #2d3331;
   /* #698c75 */
   --azeitona: #79f674;
   /* #A8B545 */
@@ -74,6 +75,10 @@ a {
   font-family: race;
 }
 
+body {
+  background-color: var(--turf-green2);
+}
+
 header {
   background-color: var(--midnight-green);
   padding: 1rem 0.7rem 1rem;
@@ -101,11 +106,17 @@ nav select {
 main {
   background: var(--stone-bridge);
   color: var(--midnight-green);
-  padding: 0vh 4vh;
+  padding: 2rem;
 
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+
+  box-sizing: border-box;
+  /* lägger till utrymme vid sidan över 1300px i skermbrädd */
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-content {
@@ -117,6 +128,11 @@ main {
 
 #ad-section {
   height: 200px;
+  /* lägger till utrymme vid sidan över 1300px i skermbrädd */
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 
   background-image: url('images/pexels-pixabay-50597-500px.jpg');
   background-size: cover;
@@ -157,7 +173,7 @@ main {
 
 #hero-section {
   height: 250px;
-  margin: 0 -4vh;
+  margin: 0 -2rem;
 
   background: url('images/pexels-rdne-6539832-500px.jpg');
   background-size: cover;
@@ -228,7 +244,7 @@ footer a {
   list-style-type: none;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 768px) {
   #services-grid {
     background: var(--swing-sage);
 
@@ -259,11 +275,94 @@ footer a {
 
   #hero-section {
     height: 400px;
-    margin: 0 -4vh;
+    margin: 0 -2rem;
 
     background: url('images/pexels-rdne-6539832-800px.jpg');
     background-size: cover;
     background-position: 0;
     background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #ad-section {
+    height: 300px;
+
+    background-image: url('images/pexels-pixabay-50597-1300px.jpg');
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
+
+  #services-article {
+    grid-column: 1/4;
+  }
+
+  #hero-section {
+    grid-column: 1/4;
+
+    height: 400px;
+    margin: 0 -2rem;
+
+    background: url('images/pexels-rdne-6539832-1300px.jpg');
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
+
+  #workouts-article {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  #services-grid {
+    background: var(--swing-sage);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #service1-section {
+    grid-column: 1;
+  }
+
+  #service2-section {
+    grid-column: 2;
+  }
+
+  #service3-section {
+    grid-column: 3;
+  }
+
+  #workouts-flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: var(--swing-sage);
+  }
+
+  .workouts {
+    flex-grow: 1;
+  }
+
+  #coaches-section {
+    grid-row: 3/5;
+  }
+
+  .coach-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .coach p {
+    max-width: 300px;
+  }
+
+  #reviews-section {
+    grid-column: 1/4;
   }
 }
