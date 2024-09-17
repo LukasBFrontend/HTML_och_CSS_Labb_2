@@ -10,6 +10,7 @@
   /* #A8B545 */
   --swing-sage: #f0f0eb;
   /* --swing-sage: #c2c1ae; */
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* fonter */
@@ -33,7 +34,7 @@
   font-family: roundo;
 }
 
-/* rubriker */
+/* rubriker och text */
 h1,
 h2,
 h3,
@@ -73,6 +74,14 @@ h3 {
 
 a {
   font-family: race;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  line-height: 2;
 }
 
 body {
@@ -144,27 +153,21 @@ main {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
 #ad-section h2 {
-  background: rgba(1, 1, 1, .2);
-  margin: 0;
-
-  flex-grow: 1;
-
+  width: 100%;
+  text-shadow: 4px 0 0 var(--shadow), -4px 0 0 var(--shadow), 0 4px 0 var(--shadow), 0 -4px 0 var(--shadow), 2px 2px var(--shadow), -2px -2px 0 var(--shadow), 2px -2px 0 var(--shadow), -2px 2px 0 var(--shadow);
 }
 
 #ad-section a {
-  background: rgba(1, 1, 1, .2);
+  width: 100%;
   padding: 0.3rem 0.5rem;
-
   color: var(--azeitona);
-
+  text-shadow: 2px 0 0 var(--shadow), -2px 0 0 var(--shadow), 0 -2px 0 var(--shadow), 1px 1px var(--shadow), -1px -1px 0 var(--shadow), -1px 1px 0 var(--shadow);
 }
-
-#services-article {}
 
 #services-article section {
   background-color: var(--swing-sage);
@@ -192,16 +195,10 @@ main {
   margin-right: auto;
 }
 
-#workouts-article {}
-
 .workouts {
   background: var(--swing-sage);
   padding: 0.5rem;
 }
-
-#coaches-section {}
-
-#coaches-section p {}
 
 .coach {
   background: var(--swing-sage);
@@ -214,8 +211,6 @@ main {
   transform: scaleX(-1);
 }
 
-#reviews-section {}
-
 .reviews {
   background: var(--swing-sage);
   padding: 0.5rem;
@@ -224,11 +219,17 @@ main {
 footer {
   background: var(--midnight-green);
   color: var(--swing-sage);
+}
 
+.flex-contain {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
   padding: 1rem;
+
 }
 
 footer h3 {
@@ -240,11 +241,24 @@ footer a {
   font-family: roundo;
 }
 
-#socials-section ul {
-  list-style-type: none;
+footer section {
+  border-left: 2px solid var(--swing-sage);
+  padding: 1rem;
+  margin-right: 10vw;
 }
 
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+
 @media (min-width: 480px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
   #services-grid {
     background: var(--swing-sage);
 
@@ -273,6 +287,10 @@ footer a {
     background-repeat: no-repeat;
   }
 
+  #ad-section a {
+    font-size: 1.3rem;
+  }
+
   #hero-section {
     height: 400px;
     margin: 0 -2rem;
@@ -285,6 +303,19 @@ footer a {
 }
 
 @media (min-width: 768px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
   main {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -296,6 +327,10 @@ footer a {
     background-size: cover;
     background-position: 0;
     background-repeat: no-repeat;
+  }
+
+  #ad-section a {
+    font-size: 1.7rem;
   }
 
   #services-article {
