@@ -1,19 +1,27 @@
-/* grundfärger */
 :root {
   --midnight-green: #024554;
+  --midnight-green-light: #035f74;
+  --midnight-shadow: rgba(0, 44, 53, 0.5);
   --stone-bridge: #435b54;
-  /* #4e6b63 */
   --turf-green: #5a7664;
   --turf-green2: #2d3331;
-  /* #698c75 */
   --azeitona: #79f674;
-  /* #A8B545 */
   --swing-sage: #f0f0eb;
-  /* --swing-sage: #c2c1ae; */
   --shadow: rgba(0, 0, 0, 0.3);
+  /* stone-bridge: #4e6b63 */
+  /* --turf-green: #698c75 */
+  /* --azeitona: #A8B545 */
+  /* --swing-sage: #c2c1ae; */
 }
 
-/* fonter */
+a:hover {
+  text-decoration: none;
+
+  .arrow {
+    margin-left: 8px;
+  }
+}
+
 @font-face {
   font-family: maiden;
   src: url('fonts/MaidenCrimes-WRPE.ttf');
@@ -29,12 +37,13 @@
   src: url('fonts/Roundo-Regular.otf');
 }
 
+
 * {
   margin: 0;
   font-family: roundo;
 }
 
-/* rubriker och text */
+/* rubriker och text <start> */
 h1,
 h2,
 h3,
@@ -59,9 +68,15 @@ h3 {
   background-color: var(--azeitona);
 }
 
-/* högerpil */
+p {
+  line-height: 1.5;
+}
+
+/* rubriker och text <slut> */
+
+/* högerpil <start> */
 .arrow {
-  border: solid black;
+  border: solid var(--midnight-green);
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -72,18 +87,18 @@ h3 {
   -webkit-transform: rotate(-45deg);
 }
 
+/* högerpil <slut> */
+
 a {
   font-family: race;
-}
-
-p {
-  line-height: 1.5;
+  cursor: pointer;
 }
 
 li {
   line-height: 2;
 }
 
+/* specifikt sidoinnehåll <start>*/
 body {
   background-color: var(--turf-green2);
 }
@@ -104,116 +119,156 @@ nav h1 {
   color: var(--azeitona);
 }
 
-nav label {
+nav a {
   margin-left: auto;
-}
-
-nav select {
-  width: 4rem;
+  color: var(--swing-sage);
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 main {
-  background: var(--stone-bridge);
-  color: var(--midnight-green);
-  padding: 2rem;
-
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 
   box-sizing: border-box;
-  /* lägger till utrymme vid sidan över 1300px i skermbrädd */
-  max-width: 1300px;
+  padding: 2rem;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1300px;
+
+  background: var(--stone-bridge);
+  color: var(--midnight-green);
 }
 
 .main-content {
-  background: var(--turf-green);
-  padding: 1rem;
-
   border-radius: 10px;
+  padding: 1rem;
+  background: var(--turf-green);
 }
 
 #ad-section {
-  height: 200px;
-  /* lägger till utrymme vid sidan över 1300px i skermbrädd */
-  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
+  max-width: 1300px;
+  height: 200px;
 
   background-image: url('images/pexels-pixabay-50597-500px.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
+  background-color: rgba(0, 0, 0, 0.185);
+  background-blend-mode: multiply;
 
   text-align: center;
-  padding: 0.5rem;
-
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
 }
 
 #ad-section h2 {
   width: 100%;
-  text-shadow: 4px 0 0 var(--shadow), -4px 0 0 var(--shadow), 0 4px 0 var(--shadow), 0 -4px 0 var(--shadow), 2px 2px var(--shadow), -2px -2px 0 var(--shadow), 2px -2px 0 var(--shadow), -2px 2px 0 var(--shadow);
 }
 
 #ad-section a {
+  padding: .1rem .3rem;
   width: 100%;
-  padding: 0.3rem 0.5rem;
   color: var(--azeitona);
-  text-shadow: 2px 0 0 var(--shadow), -2px 0 0 var(--shadow), 0 -2px 0 var(--shadow), 1px 1px var(--shadow), -1px -1px 0 var(--shadow), -1px 1px 0 var(--shadow);
 }
 
 #services-article section {
+  padding: .5rem .5rem 2.5rem .5rem;
   background-color: var(--swing-sage);
-  padding: 0.5rem
 }
 
+#services-article a {
+  position: absolute;
+  bottom: 0;
+
+  margin: 1rem;
+
+  color: var(--midnight-green);
+}
+
+.services {
+  border: 2px solid var(--swing-sage);
+  position: relative;
+}
+
+.services:hover {
+  border: 2px dashed var(--midnight-green-light);
+}
+
+
 #hero-section {
-  height: 250px;
   margin: 0 -2rem;
+  height: 250px;
 
   background: url('images/pexels-rdne-6539832-500px.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
+}
 
+#hero-section h2 {
+  margin: 0;
 }
 
 #hero-section div {
-  background-color: rgba(1, 1, 1, .5);
-  padding: 0 .5rem;
-  width: 80%;
-
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  padding: .7rem .5rem;
+
+  width: 100%;
+  background-color: var(--midnight-shadow);
 }
 
 .workouts {
   background: var(--swing-sage);
-  padding: 0.5rem;
+  border: 2px solid var(--swing-sage);
+  padding: .7rem;
+}
+
+.workouts:hover {
+  border: 2px dashed var(--midnight-green-light);
 }
 
 .coach {
+  padding: .7rem;
   background: var(--swing-sage);
-  padding: 0.5rem;
+}
+
+.coach h3 {
+  background: none;
+  text-align: left;
+  font-family: roundo;
 }
 
 .coach img {
+  transform: scaleX(-1);
+  margin-bottom: .5rem;
   clip-path: circle();
   width: 200px;
-  transform: scaleX(-1);
+}
+
+#reviews-section {
+  margin-right: -2rem;
+  border-radius: 0;
+  background-color: var(--swing-sage);
+  overflow: hidden;
 }
 
 .reviews {
+  padding: .75rem;
+  min-width: 450px;
   background: var(--swing-sage);
-  padding: 0.5rem;
+  color: var(--midnight-green-light);
+  font-size: 1.25rem;
+  line-height: 2;
 }
 
 footer {
@@ -222,18 +277,31 @@ footer {
 }
 
 .flex-contain {
-  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
+  max-width: 1300px;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+footer section {
+  border-left: 2px solid var(--swing-sage);
+  padding: 1rem;
+  text-align: left;
+  flex-grow: 1;
 }
 
 footer h3 {
   background: none;
+  text-align: left;
+  font-family: roundo;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style-type: none;
 }
 
 footer a {
@@ -241,41 +309,21 @@ footer a {
   font-family: roundo;
 }
 
-footer section {
-  border-left: 2px solid var(--swing-sage);
-  padding: 1rem;
-  margin-right: 10vw;
+footer a:hover {
+  color: var(--azeitona);
 }
 
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
+#socials-section li {
+  display: inline;
+  margin-right: 2rem;
+  font-size: 2rem;
 }
 
-
+/* specifikt sidoinnehåll <slut> */
 
 @media (min-width: 480px) and (max-width: 768px) {
   h1 {
     font-size: 2.3rem;
-  }
-
-  #services-grid {
-    background: var(--swing-sage);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #workouts-flex {
-    display: flex;
-    flex-wrap: wrap;
-
-
-    background-color: var(--swing-sage);
-  }
-
-  .workouts {
-    flex-grow: 1;
   }
 
   #ad-section {
@@ -291,14 +339,30 @@ footer ul {
     font-size: 1.3rem;
   }
 
+  #services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--swing-sage);
+  }
+
   #hero-section {
-    height: 400px;
     margin: 0 -2rem;
+    height: 400px;
 
     background: url('images/pexels-rdne-6539832-800px.jpg');
     background-size: cover;
     background-position: 0;
     background-repeat: no-repeat;
+  }
+
+  #workouts-flex {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--swing-sage);
+  }
+
+  .workouts {
+    flex-grow: 1;
   }
 }
 
@@ -337,28 +401,11 @@ footer ul {
     grid-column: 1/4;
   }
 
-  #hero-section {
-    grid-column: 1/4;
-
-    height: 400px;
-    margin: 0 -2rem;
-
-    background: url('images/pexels-rdne-6539832-1300px.jpg');
-    background-size: cover;
-    background-position: 0;
-    background-repeat: no-repeat;
-  }
-
-  #workouts-article {
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-
   #services-grid {
-    background: var(--swing-sage);
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    background: var(--swing-sage);
   }
 
   #service1-section {
@@ -373,6 +420,22 @@ footer ul {
     grid-column: 3;
   }
 
+  #hero-section {
+    grid-column: 1/4;
+    margin: 0 -2rem;
+    height: 400px;
+
+    background: url('images/pexels-rdne-6539832-1300px.jpg');
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
+
+  #workouts-article {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+
   #workouts-flex {
     display: flex;
     flex-wrap: wrap;
@@ -385,19 +448,19 @@ footer ul {
   }
 
   #coaches-section {
-    grid-row: 3/5;
+    grid-row: 4/6;
   }
 
   .coach-flex {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  .coach p {
-    max-width: 300px;
   }
 
   #reviews-section {
     grid-column: 1/4;
+    grid-row: 3
   }
 }
+
+/* Validerad  2024-09-19 */
